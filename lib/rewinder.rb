@@ -9,7 +9,7 @@ def heloo
 
   g = Git.open('./')
   # g.checkout(g.branch('master'))
-  g.branch('rewinder').checkout
+  # g.branch('rewinder').checkout
 
   g.log(3).to_a.reverse.each_with_index do |l, i|
     g.checkout(l.sha)
