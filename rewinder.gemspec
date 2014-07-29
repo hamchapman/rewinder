@@ -9,13 +9,13 @@ Gem::Specification.new do |s|
   s.description = "A simple hello world gem"
   s.authors     = ["Hamilton Chapman"]
   s.email       = 'hamchapman@gmail.com'
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = `git ls-files`.split($\)
+  # s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = ['rewinder']
   s.homepage    =
     'http://rubygems.org/gems/rewinder'
   s.license       = 'MIT'
   s.add_development_dependency 'git'
-
+  s.require_paths = ['lib']
 end
 
