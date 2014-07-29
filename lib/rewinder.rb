@@ -1,11 +1,15 @@
 require 'git'
 
 def heloo
+  puts "****************************************************************"
+  puts `pwd`
+
   Dir.chdir("./")
 
   g = Git.open('./')
+  `SKIP_HOOKUP=1 git checkout master`
   # g.checkout(g.branch('master'))
-  # g.branch('rewinder').checkout
+  g.branch('rewinder').checkout
 
   g.log(3).to_a.reverse.each_with_index do |l, i|
     g.checkout(l.sha)
@@ -14,7 +18,7 @@ def heloo
     `rake db:migrate RAILS_ENV=production`
     system "rails server &"
     sleep 8
-    `phantomjs ./rasterize.js 'http://localhost:3000/' ~/.rewinder/homescreen#{(i+1).to_s.rjust(6, '0')}.png`
+    `phantomjs ~/Desktop/rasterize.js 'http://localhost:3000/' ~/.rewinder/homescreen#{(i+1).to_s.rjust(6, '0')}.png`
     puts "Killing"
     puts system 'kill -9 `cat tmp/pids/server.pid`'
     puts "Hard resetting"
