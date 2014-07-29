@@ -3,10 +3,6 @@ require 'git'
 def heloo
   Dir.chdir("./")
 
-  puts `pwd`
-  puts "****************************************************************"
-  puts Dir.pwd
-
   g = Git.open('./')
   # g.checkout(g.branch('master'))
   # g.branch('rewinder').checkout

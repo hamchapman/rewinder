@@ -16,5 +16,6 @@ Gem::Specification.new do |s|
   s.license        = 'MIT'
   s.require_paths  = ['lib']
   s.add_dependency 'git'
+  s.add_dependency 'hookup'
 end
 
