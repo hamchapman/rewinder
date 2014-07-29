@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.homepage    =
     'http://rubygems.org/gems/rewinder'
   s.license       = 'MIT'
-  s.add_dependency 'git'
+  s.add_runtime_dependency 'git'
   s.require_paths = ['lib']
 end
 
