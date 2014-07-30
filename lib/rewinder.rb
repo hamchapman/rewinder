@@ -11,7 +11,7 @@ module Rewinder
       g.checkout(g.branch('master'))
       g.branch('rewinder').checkout
 
-      g.log(3).to_a.reverse.each_with_index do |l, i|
+      g.log(50).to_a.reverse.each_with_index do |l, i|
         g.checkout(l.sha)
         puts l.sha
         puts `bundle install`
