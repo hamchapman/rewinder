@@ -11,7 +11,7 @@ module Rewinder
       g.checkout(g.branch('master'))
       g.branch('rewinder').checkout
 
-      g.log(50).to_a.reverse.each_with_index do |l, i|
+      g.log(10).to_a.reverse.each_with_index do |l, i|
         g.checkout(l.sha)
         puts l.sha
         puts `bundle install`
@@ -32,7 +32,7 @@ module Rewinder
       g.branch('rewinder').delete
 
       `ffmpeg -f image2 -r 0.5 -i ~/.rewinder/homescreen%06d.png -s 1440x900 -vcodec libx264 -pix_fmt yuv420p ./rewinder.mp4`
-      `rm -rf ~/.rewinder`
+      # `rm -rf ~/.rewinder`
     end
   end
 end
