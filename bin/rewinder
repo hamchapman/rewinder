@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
 require 'rewinder'
 
-heloo
+rewinder = Rewinder::Snapshotter.new
+rewinder.create_video
