@@ -27,9 +27,15 @@
 
 
       <header>
-        <div class="title">REWINDER</div>
-        <div class="description">Rewinder goes back through the git history of your site and creates a timelapse video showing how it's changed visually</div>
-        <pre class="gem-install"> gem install rewinder </pre>
+        <div class="container">
+          <div class="row">
+            <div class="title">REWINDER</div>
+            <div class="description">Rewinder goes back through the git history of your site and creates a timelapse video showing how it's changed visually</div>
+            <pre class="gem-install"> gem install rewinder </pre>
+            <div class="copy-install-text">click to copy</div>
+            <img class="curly-arrow" src="assets/images/curly-arrow.png"/>
+          </div>
+        </div>
       </header>
 
       <section class="main-content">
@@ -92,6 +98,18 @@
       padding-top: 10px;
     }
 
+    .curly-arrow {
+      width: 40px;
+      margin-top: -30px;
+      margin-left: -130px;
+    }
+
+    @media all and (max-width: 991px) {
+      header {
+        height: 400px;
+      }
+    }
+
     @font-face {
       font-family: 'Revolution';
       src: url('/assets/fonts/revolution-webfont.eot');
@@ -124,6 +142,10 @@
       padding-top: 10px;
     }
 
+    nav a {
+      padding: 0 10px;
+    }
+
     pre {
       background-color: inherit;
       color: inherit;
@@ -131,11 +153,15 @@
     }
 
     .gem-install {
-      margin: 20px auto;
+      margin: 60px auto 10px;
       padding: 10px;
       width: 250px;
       background-color: #FFF;
       color: #8d8c8a;
+    }
+
+    .copy-install-text {
+      color: #FFF;
     }
 
     .gem-install:hover, .gem-install:focus {
@@ -176,7 +202,7 @@
       background: radial-gradient(ellipse at center,  #bf4a4c 0%,#841925 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf4a4c', endColorstr='#841925',GradientType=1 );
       width: 100%;
-      height: 300px;
+      height: 350px;
     }
 
   </style>
