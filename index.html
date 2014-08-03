@@ -26,8 +26,9 @@
 
 
       <header>
-        REWINDER
-        <pre> gem install rewinder </pre>
+        <div class="title">REWINDER</div>
+        <div class="description">Rewinder goes back through the git history of your site and creates a timelapse video showing how it's changed visually</div>
+        <pre class="gem-install"> gem install rewinder </pre>
       </header>
 
       <footer>
@@ -81,12 +82,28 @@
       border: none;
     }
 
-    header {
-      margin-top: -40px;
-      padding-top: 100px;
-      text-align: center;
+    .gem-install {
+      margin: 20px auto;
+      padding: 10px;
+      width: 250px;
+      background-color: #FFF;
+      color: #8d8c8a;
+    }
+
+    .title {
+      font-family: 'Revolution';
       font-size: 70px;
       font-weight: 200;
+    }
+
+    .description {
+      font-size: 16px;
+    }
+
+    header {
+      margin-top: -40px;
+      padding-top: 60px;
+      text-align: center;
       color: #FFF;
       background: #bf4a4c;
       background: -moz-radial-gradient(center, ellipse cover,  #bf4a4c 0%, #841925 100%);
@@ -98,7 +115,6 @@
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf4a4c', endColorstr='#841925',GradientType=1 );
       width: 100%;
       height: 300px;
-      font-family: 'Revolution';
     }
 
   </style>
