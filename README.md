@@ -1,9 +1,9 @@
 **Rewinder**
 
-Rewinder lets you rewind time and create a video of what your site's homepage looked like throughout its entire history.
+Rewinder goes back through the git history of your site and creates a timelapse video showing how it's changed visually.
 
 Pretty neat.
 
 **Known Bugs**
 
-- If you have the hookup gem installed it will stop rewinder from working
+- If you have the hookup gem installed rewinder will not work

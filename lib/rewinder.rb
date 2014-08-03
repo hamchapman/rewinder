@@ -32,14 +32,7 @@ module Rewinder
       g.branch('rewinder').delete
 
       `ffmpeg -f image2 -r 0.5 -i ~/.rewinder/homescreen%06d.png -s 1440x900 -vcodec libx264 -pix_fmt yuv420p ./rewinder.mp4`
-      # `rm -rf ~/.rewinder`
+      `rm -rf ~/.rewinder`
     end
   end
 end
-
-
-  # brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools
-
-  # https://github.com/schacon/ruby-git
-
-# `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
